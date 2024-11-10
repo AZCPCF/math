@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import "./App.css";
 import useQe from "./hooks/useQe";
 function App() {
@@ -9,13 +8,17 @@ function App() {
       <header className="App-header">
         <h1 className="text-3xl m-4 text-green-400">Quadratic Equation</h1>
         {Object.keys(qe).map((item) => (
-          <div className="w-[90%] md:w-1/3 sm:w-1/2 xl:w-1/5 text-left m-2">
-            <label className="p-2" htmlFor={item}>{item}</label>
+          <div
+            className="w-[90%] md:w-1/3 sm:w-1/2 xl:w-1/5 text-left m-2"
+            key={item}
+          >
+            <label className="p-2" htmlFor={item}>
+              {item}
+            </label>
             <input
               className="text-black w-full border-[3px] border-green-400 rounded-lg p-2 mt-2"
               placeholder={item}
               id={item}
-              key={item}
               onChange={handleChnageQe}
               value={qe[item]}
             />
