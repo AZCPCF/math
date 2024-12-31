@@ -4,8 +4,7 @@ function App() {
   const { result, solveQe, qe, handleChnageQe } = useQe();
 
   return (
-    <div className="App">
-      <header className="App-header">
+      <div className="App">
         <h1 className="text-3xl m-4 text-green-400">Quadratic Equation</h1>
         {Object.keys(qe).map((item) => (
           <div
@@ -32,8 +31,7 @@ function App() {
           onClick={solveQe}
         />
         <p className="text-green-400 mt-14">{result}</p>
-      </header>
-    </div>
+      </div>
   );
 }
 
